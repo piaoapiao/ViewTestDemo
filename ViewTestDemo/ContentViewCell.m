@@ -29,6 +29,9 @@
     {
         self = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([self class]) owner:nil options:nil] objectAtIndex:0];
     }
+    self.selectionStyle = UITableViewCellSelectionStyleNone;
+    self.headImageView.layer.masksToBounds = YES;
+    self.headImageView.layer.cornerRadius = 12.5;
     
     if ([self respondsToSelector:@selector(setSeparatorInset:)]) {
         

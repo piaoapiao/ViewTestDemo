@@ -57,13 +57,25 @@
 {
     ContentViewCell *cell = [[ContentViewCell alloc] init];
     cell.contentLbl.text = [self.contentArray objectAtIndex:[indexPath row]];
+    
     return cell;
 }
 
 -(void)layoutView
 {
+//    self.view.backgroundColor = [UIColor colorWithRed:246 green:247 blue:248 alpha:1];
+    
     self.tableView.frame = CGRectMake(0, 0,  [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height);
-    self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+    //self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    
+    //self.view.backgroundColor = [UIColor colorWithRed:200 green:200 blue:200 alpha:1];
+    
+//    self.view.backgroundColor = [UIColor colorWithRed:0.96 green:0.97 blue:0.97 alpha:1];
+    
+    self.tableView.backgroundColor = [UIColor colorWithRed:0.96 green:0.97 blue:0.97 alpha:1];
+
+    
     [self.view addSubview:self.tableView];
 }
 

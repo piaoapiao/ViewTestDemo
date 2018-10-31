@@ -11,6 +11,7 @@
 @interface ContentViewCell : UITableViewCell
 
 //@property IBOutlet(nonatomic,strong) UILabel *;
+@property (weak, nonatomic) IBOutlet UIImageView *headImageView;
 
 @property (weak, nonatomic) IBOutlet UILabel *contentLbl;
 @end
