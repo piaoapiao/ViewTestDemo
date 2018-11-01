@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		46175188218AD3CF00A210A4 /* VaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46175186218AD3CF00A210A4 /* VaryViewController.m */; };
+		46175189218AD3CF00A210A4 /* VaryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46175187218AD3CF00A210A4 /* VaryViewController.xib */; };
 		46365DC9218859FC003A86FE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 46365DC8218859FC003A86FE /* AppDelegate.m */; };
 		46365DCC218859FC003A86FE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46365DCB218859FC003A86FE /* ViewController.m */; };
 		46365DCF218859FC003A86FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46365DCD218859FC003A86FE /* Main.storyboard */; };
@@ -27,6 +29,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		46175185218AD3CF00A210A4 /* VaryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VaryViewController.h; sourceTree = "<group>"; };
+		46175186218AD3CF00A210A4 /* VaryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VaryViewController.m; sourceTree = "<group>"; };
+		46175187218AD3CF00A210A4 /* VaryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VaryViewController.xib; sourceTree = "<group>"; };
 		46365DC4218859FC003A86FE /* ViewTestDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViewTestDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46365DC7218859FC003A86FE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		46365DC8218859FC003A86FE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -102,6 +107,9 @@
 				46365DE021885A5C003A86FE /* StackViewViewController.xib */,
 				46365DE221885A5C003A86FE /* TestCollectionViewController.h */,
 				46365DDD21885A5C003A86FE /* TestCollectionViewController.m */,
+				46175185218AD3CF00A210A4 /* VaryViewController.h */,
+				46175186218AD3CF00A210A4 /* VaryViewController.m */,
+				46175187218AD3CF00A210A4 /* VaryViewController.xib */,
 				46365DEC21885AB7003A86FE /* CollectCell.h */,
 				46365DEB21885AB7003A86FE /* CollectCell.m */,
 				46365DEA21885AB7003A86FE /* CollectCell.xib */,
@@ -175,6 +183,7 @@
 			files = (
 				46365DF021886370003A86FE /* AlertView.xib in Resources */,
 				46365DED21885AB7003A86FE /* CollectCell.xib in Resources */,
+				46175189218AD3CF00A210A4 /* VaryViewController.xib in Resources */,
 				464730E821894330000AFC65 /* ContentViewCell.xib in Resources */,
 				46365DE621885A5D003A86FE /* StackViewViewController.xib in Resources */,
 				46365DD4218859FE003A86FE /* LaunchScreen.storyboard in Resources */,
@@ -195,6 +204,7 @@
 				46365DEE21885AB7003A86FE /* CollectCell.m in Sources */,
 				464730E721894330000AFC65 /* ContentViewCell.m in Sources */,
 				46365DCC218859FC003A86FE /* ViewController.m in Sources */,
+				46175188218AD3CF00A210A4 /* VaryViewController.m in Sources */,
 				46365DD7218859FE003A86FE /* main.m in Sources */,
 				464730E321894149000AFC65 /* AutoCellHightViewController.m in Sources */,
 				46365DC9218859FC003A86FE /* AppDelegate.m in Sources */,
