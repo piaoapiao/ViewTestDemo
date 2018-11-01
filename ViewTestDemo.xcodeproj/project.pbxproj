@@ -26,6 +26,8 @@
 		464730E321894149000AFC65 /* AutoCellHightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 464730E221894149000AFC65 /* AutoCellHightViewController.m */; };
 		464730E721894330000AFC65 /* ContentViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 464730E521894330000AFC65 /* ContentViewCell.m */; };
 		464730E821894330000AFC65 /* ContentViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 464730E621894330000AFC65 /* ContentViewCell.xib */; };
+		46E97C80218B01EA003EA1A8 /* HeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 46E97C7F218B01EA003EA1A8 /* HeadView.m */; };
+		46E97C83218B06C2003EA1A8 /* FootView.m in Sources */ = {isa = PBXBuildFile; fileRef = 46E97C82218B06C2003EA1A8 /* FootView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +61,10 @@
 		464730E421894330000AFC65 /* ContentViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContentViewCell.h; sourceTree = "<group>"; };
 		464730E521894330000AFC65 /* ContentViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContentViewCell.m; sourceTree = "<group>"; };
 		464730E621894330000AFC65 /* ContentViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContentViewCell.xib; sourceTree = "<group>"; };
+		46E97C7E218B01EA003EA1A8 /* HeadView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeadView.h; sourceTree = "<group>"; };
+		46E97C7F218B01EA003EA1A8 /* HeadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeadView.m; sourceTree = "<group>"; };
+		46E97C81218B06C2003EA1A8 /* FootView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FootView.h; sourceTree = "<group>"; };
+		46E97C82218B06C2003EA1A8 /* FootView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FootView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +111,10 @@
 				46365DDF21885A5C003A86FE /* StackViewViewController.h */,
 				46365DE321885A5C003A86FE /* StackViewViewController.m */,
 				46365DE021885A5C003A86FE /* StackViewViewController.xib */,
+				46E97C7E218B01EA003EA1A8 /* HeadView.h */,
+				46E97C7F218B01EA003EA1A8 /* HeadView.m */,
+				46E97C81218B06C2003EA1A8 /* FootView.h */,
+				46E97C82218B06C2003EA1A8 /* FootView.m */,
 				46365DE221885A5C003A86FE /* TestCollectionViewController.h */,
 				46365DDD21885A5C003A86FE /* TestCollectionViewController.m */,
 				46175185218AD3CF00A210A4 /* VaryViewController.h */,
@@ -204,12 +214,14 @@
 				46365DEE21885AB7003A86FE /* CollectCell.m in Sources */,
 				464730E721894330000AFC65 /* ContentViewCell.m in Sources */,
 				46365DCC218859FC003A86FE /* ViewController.m in Sources */,
+				46E97C83218B06C2003EA1A8 /* FootView.m in Sources */,
 				46175188218AD3CF00A210A4 /* VaryViewController.m in Sources */,
 				46365DD7218859FE003A86FE /* main.m in Sources */,
 				464730E321894149000AFC65 /* AutoCellHightViewController.m in Sources */,
 				46365DC9218859FC003A86FE /* AppDelegate.m in Sources */,
 				46365DE921885A5D003A86FE /* Stack2ViewController.m in Sources */,
 				46365DE821885A5D003A86FE /* StackViewViewController.m in Sources */,
+				46E97C80218B01EA003EA1A8 /* HeadView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

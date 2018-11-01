@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "StackViewViewController.h"
 #import "AutoCellHightViewController.h"
+#import "TestCollectionViewController.h"
 
 @interface AppDelegate ()
 
@@ -23,7 +24,13 @@
     
     //StackViewViewController *vc = [StackViewViewController new];
     
-    AutoCellHightViewController *vc = [AutoCellHightViewController new];    
+   // AutoCellHightViewController *vc = [AutoCellHightViewController new];
+    
+     //AutoCellHightViewController *vc = [AutoCellHightViewController new];
+    
+    TestCollectionViewController *vc = [TestCollectionViewController new];
+    
+    
     
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];

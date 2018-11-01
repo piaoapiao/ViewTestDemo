@@ -8,6 +8,8 @@
 
 #import "TestCollectionViewController.h"
 #import "CollectCell.h"
+#import "HeadView.h"
+#import "FootView.h"
 
 @interface TestCollectionViewController ()
 
@@ -28,13 +30,20 @@ static NSString * const reuseIdentifier = @"Cell";
     
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
     
-    flowLayout.itemSize = CGSizeMake((self.view.bounds.size.width-10*2)/3, 300);
+    flowLayout.itemSize = CGSizeMake((self.view.bounds.size.width-10*2)/3, 50);
     
-    flowLayout.minimumInteritemSpacing = 10;
+    flowLayout.minimumInteritemSpacing = 5;
     
-    flowLayout.minimumLineSpacing = 20;
+    flowLayout.minimumLineSpacing = 20 ;
+    
+    flowLayout.headerReferenceSize = CGSizeMake(self.view.bounds.size.width, 50);
+    
+    
+    flowLayout.footerReferenceSize = CGSizeMake(self.view.bounds.size.width, 100);
     
     flowLayout.scrollDirection = UICollectionViewScrollDirectionVertical;
+    
+//      flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
     
     
     
@@ -47,6 +56,10 @@ static NSString * const reuseIdentifier = @"Cell";
     // 需要设置 这个cell ，下面2个方法都是可以的
      [collView registerNib:[UINib nibWithNibName:@"CollectCell" bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:@"mycell2"];
     
+    
+    [collView registerClass:[HeadView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"head"];
+    
+    [collView registerClass:[FootView  class] forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:@"foot"];
     
 //    [collView registerClass:[CollectCell class] forCellWithReuseIdentifier:@"mycell2"];
     
@@ -74,14 +87,14 @@ static NSString * const reuseIdentifier = @"Cell";
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
 #warning Incomplete implementation, return the number of sections
 //    return 0;
-    return 3;
+    return 4;
 }
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
 #warning Incomplete implementation, return the number of items
 //    return 0;
-    return 3;
+    return 4;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
@@ -96,12 +109,52 @@ static NSString * const reuseIdentifier = @"Cell";
     
 }
 
+
+
 #pragma mark <UICollectionViewDelegate>
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     NSLog(@"select:%d ",indexPath.row);
 }
+
+-(UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
+{
+    NSString *reuseIdentifier;
+    if([kind isEqualToString:UICollectionElementKindSectionFooter])
+    {
+        reuseIdentifier = @"foot";
+    }
+    else
+    {
+        reuseIdentifier = @"head";
+    }
+    UICollectionReusableView *view = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    
+    
+    
+    UILabel *label = (UILabel *)[view viewWithTag:1];
+    
+    if ([kind isEqualToString:UICollectionElementKindSectionHeader]){
+        
+        label.text = [NSString stringWithFormat:@"这是header:%ld",(long)indexPath.section];
+            view.backgroundColor = [UIColor redColor];
+//        label.backgroundColor = [
+        
+    }
+    
+    else if ([kind isEqualToString:UICollectionElementKindSectionFooter]){
+        
+        view.backgroundColor = [UIColor lightGrayColor];
+        
+        label.text = [NSString stringWithFormat:@"这是footer:%ld",(long)indexPath.section];
+        view.backgroundColor = [UIColor greenColor];
+    }
+
+    return view;
+    
+}
+
 /*
 // Uncomment this method to specify if the specified item should be highlighted during tracking
 - (BOOL)collectionView:(UICollectionView *)collectionView shouldHighlightItemAtIndexPath:(NSIndexPath *)indexPath {
