@@ -10,6 +10,7 @@
 #import "StackViewViewController.h"
 #import "AutoCellHightViewController.h"
 #import "TestCollectionViewController.h"
+#import "TimerViewController.h"
 
 @interface AppDelegate ()
 
@@ -28,9 +29,9 @@
     
      //AutoCellHightViewController *vc = [AutoCellHightViewController new];
     
-    TestCollectionViewController *vc = [TestCollectionViewController new];
+    //TestCollectionViewController *vc = [TestCollectionViewController new];
     
-    
+    TimerViewController *vc = [TimerViewController new];
     
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];

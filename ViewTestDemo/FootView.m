@@ -21,7 +21,7 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
         
-        self.contentLbl.frame = CGRectMake(20,20,100,20);
+        self.contentLbl.frame = CGRectMake(20,20,200,20);
         
     }
     return self;

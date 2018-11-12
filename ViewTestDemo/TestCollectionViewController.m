@@ -43,11 +43,20 @@ static NSString * const reuseIdentifier = @"Cell";
     
     flowLayout.scrollDirection = UICollectionViewScrollDirectionVertical;
     
+    flowLayout.sectionInset = UIEdgeInsetsMake(5, 10, 5, 10);
+    
+    flowLayout.sectionHeadersPinToVisibleBounds  = YES;
+    
+    flowLayout.sectionFootersPinToVisibleBounds = YES;
+    
 //      flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
     
     
     
      UICollectionView *collView = [[UICollectionView alloc] initWithFrame:self.view.frame collectionViewLayout:flowLayout];
+    collView.backgroundColor = [UIColor whiteColor];
+    
+    //collView.sectionHeadersPinToVisibleBounds  = YES;
     
      collView.delegate = self;
     
@@ -71,6 +80,33 @@ static NSString * const reuseIdentifier = @"Cell";
     
     // Do any additional setup after loading the view.
 }
+
+-(void)changeCollectView:(UICollectionView *)collectView
+{
+    UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
+
+    flowLayout.itemSize = CGSizeMake((self.view.bounds.size.width-10*2)/3, 50);
+
+    flowLayout.minimumInteritemSpacing = 5;
+
+    flowLayout.minimumLineSpacing = 40 ;
+
+    flowLayout.headerReferenceSize = CGSizeMake(self.view.bounds.size.width, 50);
+
+
+    flowLayout.footerReferenceSize = CGSizeMake(self.view.bounds.size.width, 100);
+
+    flowLayout.scrollDirection = UICollectionViewScrollDirectionVertical;
+
+    flowLayout.sectionInset = UIEdgeInsetsMake(5, 10, 5, 10);
+
+    flowLayout.sectionHeadersPinToVisibleBounds  = YES;
+
+    flowLayout.sectionFootersPinToVisibleBounds = YES;
+    
+//    collectView.sec
+}
+
 
 /*
 #pragma mark - Navigation
@@ -116,6 +152,9 @@ static NSString * const reuseIdentifier = @"Cell";
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     NSLog(@"select:%d ",indexPath.row);
+    
+    
+    
 }
 
 -(UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
